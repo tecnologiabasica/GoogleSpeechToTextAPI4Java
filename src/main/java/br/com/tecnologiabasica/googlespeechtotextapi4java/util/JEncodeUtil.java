@@ -13,10 +13,11 @@ import java.io.IOException;
  */
 public class JEncodeUtil {
 
-    public static String encodeFileToFlac(String filePath) throws IOException {
+    public static String encodeFileToFlac(String filePath) throws IOException, InterruptedException {
         Runtime rt = Runtime.getRuntime();
         String path = "sox " + filePath + " --rate 8k --bits 16 --channels 1 " + filePath + ".flac";
-        rt.exec(path);
+        Process process = rt.exec(path);
+        process.waitFor();
         return filePath + ".flac";
     }
   
