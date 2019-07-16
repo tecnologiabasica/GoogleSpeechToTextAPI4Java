@@ -27,7 +27,7 @@ Easy way to use Google Cloud Speech-to-Text API using JAVA
     libsox-fmt-mp3
 ```
 
-# API KEY
+## API KEY
 
 To use the Google Speech-to-Text API, you need to enable API_KEY. More information: https://cloud.google.com/speech-to-text/
 
