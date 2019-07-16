@@ -57,9 +57,12 @@ If you want to set the apiKey hard coded, follow this instruction:
             
             GoogleSpeechToTextAPI googleSpeechToTextAPI = new GoogleSpeechToTextAPI();
             transcript = googleSpeechToTextAPI.recognize(base64File, encoding, sampleRateHertz, languageCode);
-            System.out.println(transcript);
-            if(transcript != null && !transcript.isEmpty()) {
+            if (transcript != null && !transcript.isEmpty()) {
+                System.out.println("Transcript: " + transcript);
                 System.out.println("Confidence: " + googleSpeechToTextAPI.getConfidence());
+            } else {
+                System.out.println("statusCode: " + googleSpeechToTextAPI.getStatusCode());
+                System.out.println("message: " + googleSpeechToTextAPI.getMessage());
             }
         } catch (IOException ex) {
             Logger.getLogger(JLauncher.class.getName()).log(Level.SEVERE, null, ex);
