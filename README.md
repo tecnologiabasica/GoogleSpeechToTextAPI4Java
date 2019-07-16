@@ -11,13 +11,21 @@ Easy way to use Google Cloud Speech-to-Text API using JAVA
     </dependency>
 ```
 
+## System Dependency
+
+```
+    sox
+    libsox-fmt-all
+    libsox-fmt-mp3
+```
+
 ## Example
 
 ```
     public static void main(String[] args) {
         
         try {           
-            String base64File = JBase64Util.getFileAsBase64(JEncodeUtil.encodeFileToFlac("/home/afonso/Downloads/transcript.mp3"));
+            String base64File = JBase64Util.getFileAsBase64(JEncodeUtil.encodeFileToFlac("[file-path]"));
             String encoding = "FLAC";
             String sampleRateHertz = "8000";
             String languageCode = "pt-BR";
