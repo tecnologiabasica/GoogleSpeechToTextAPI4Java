@@ -19,6 +19,22 @@ Easy way to use Google Cloud Speech-to-Text API using JAVA
     libsox-fmt-mp3
 ```
 
+# API KEY
+
+To use the Google Speech-to-Text API, you need to enable API_KEY. More information: https://cloud.google.com/speech-to-text/
+
+This library will search file .googlecloud.properties in the home diretory. The key must be in the variable 'apiKey':
+
+```
+    apiKey=AIza...
+```
+
+If you want to set the apiKey hard coded, follow this instruction:
+
+```
+    JCommons.getInstance().setApiKey("[your_key]");
+```
+
 ## Example
 
 ```
@@ -50,4 +66,4 @@ Easy way to use Google Cloud Speech-to-Text API using JAVA
 
 ## License
 
-This project is licensed under the GNU GENERAL PUBLIC LICENSE V2 - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GENERAL PUBLIC LICENSE V2 - see the [LICENSE](LICENSE) file for details
